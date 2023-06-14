@@ -1,8 +1,9 @@
 import express from "express";
-import AuthController from "../controllers/auth-controller.js";
+import authController from "../controllers/auth-controller.js";
 
 const publicRouter = new express.Router();
-publicRouter.post("/api/auth", AuthController.signup);
+publicRouter.post("/api/auth/signup", authController.signUp);
+publicRouter.post("/api/auth/signin", authController.signIn);
 
 export {
     publicRouter

@@ -6,6 +6,12 @@ const signUpAuthValidation = Joi.object({
     name: Joi.string().max(100).required()
 })
 
+const signInAuthValidation = Joi.object({
+    username: Joi.string().max(100).required(),
+    password: Joi.string().max(100).required()
+})
+
 export {
-    signUpAuthValidation
+    signUpAuthValidation,
+    signInAuthValidation
 }
