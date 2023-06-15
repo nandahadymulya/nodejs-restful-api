@@ -22,7 +22,19 @@ const signIn = async (req, res, next) => {
     }
 }
 
+const signOut = async (req, res, next) => {
+    try {
+        await authService.signOut(req.user.username);
+        res.status(200).json({
+            data: "sign out succeed"
+        });
+    } catch (e) {
+        next();
+    }
+}
+
 export default {
     signUp,
-    signIn
+    signIn,
+    signOut
 }
