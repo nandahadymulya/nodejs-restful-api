@@ -16,7 +16,7 @@ Request Body :
     "firstname": "Nanda",
     "lastname": "Hady Mulya",
     "email": "email@gmail.com",
-    "phone": "082111200300"
+    "phone": "082000200300"
 }
 ```
 
@@ -28,7 +28,7 @@ Response Body Succeed :
         "firstname": "Nanda",
         "lastname": "Hady Mulya",
         "email": "email@gmail.com",
-        "phone": "082111200300"
+        "phone": "082000200300"
     }
 }
 ```
@@ -56,7 +56,7 @@ Request Body :
     "firstname": "Nanda",
     "lastname": "Hady Mulya",
     "email": "email@gmail.com",
-    "phone": "082111200300"
+    "phone": "082000200300"
 }
 ```
 
@@ -97,7 +97,7 @@ Response Body Succeed :
         "firstname": "Nanda",
         "lastname": "Hady Mulya",
         "email": "email@gmail.com",
-        "phone": "082111200300"
+        "phone": "082000200300"
     }
 }
 ```
@@ -160,14 +160,14 @@ Response Body Succeed :
             "firstname": "Nanda",
             "lastname": "Hady Mulya",
             "email": "email@gmail.com",
-            "phone": "082111200300"
+            "phone": "082000200300"
         },
         {
             "id": 2,
             "firstname": "Nanda",
             "lastname": "Hady Mulya",
             "email": "email@gmail.com",
-            "phone": "082111200300"
+            "phone": "082000200300"
         }
     ],
     "paging": {
