@@ -12,6 +12,4 @@ web.use(userRouter);
 
 web.use(errorMiddleware);
 
-export {
-    web
-}
+export { web };

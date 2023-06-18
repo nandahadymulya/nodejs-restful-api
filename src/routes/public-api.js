@@ -7,6 +7,4 @@ const publicRouter = new express.Router();
 publicRouter.post("/api/auth/signup", authController.signup);
 publicRouter.post("/api/auth/signin", authController.signin);
 
-export {
-    publicRouter
-}
+export { publicRouter };

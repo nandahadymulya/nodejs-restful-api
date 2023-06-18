@@ -1,28 +1,32 @@
 import { prismaClient } from "../apps/database.js";
 
 const authMiddleware = async (req, res, next) => {
-    const token = req.get("Authorization");
-    if (!token) {
-        res.status(401).json({
-            errors: "unauthorized"
-        }).end();
+  const token = req.get("Authorization");
+  if (!token) {
+    res
+      .status(401)
+      .json({
+        errors: "unauthorized",
+      })
+      .end();
+  } else {
+    const user = await prismaClient.user.findFirst({
+      where: {
+        token: token,
+      },
+    });
+    if (!user) {
+      res
+        .status(401)
+        .json({
+          errors: "unauthorized",
+        })
+        .end();
     } else {
-        const user = await prismaClient.user.findFirst({
-            where: {
-                token: token
-            }
-        });
-        if (!user) {
-            res.status(401).json({
-                errors: "unauthorized"
-            }).end();
-        } else {
-            req.user = user;
-            next();
-        }
+      req.user = user;
+      next();
     }
-}
+  }
+};
 
-export {
-    authMiddleware
-}
+export { authMiddleware };
