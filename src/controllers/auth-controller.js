@@ -26,7 +26,7 @@ const signout = async (req, res, next) => {
   try {
     await authService.signout(req.user.username);
     res.status(200).json({
-      data: "sign out succeed",
+      message: "sign out succeed",
     });
   } catch (e) {
     next();

@@ -123,7 +123,7 @@ describe("DELETE /api/auth/signout", function () {
       .set("Authorization", "test");
 
     expect(result.status).toBe(200);
-    expect(result.body.data).toBe("sign out succeed");
+    expect(result.body.message).toBe("sign out succeed");
 
     const user = await getTestUser();
     expect(user.token).toBeNull();
